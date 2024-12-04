@@ -1,10 +1,10 @@
 ---
 - name: Ensure the HTML directory exists
-      become: true
-      ansible.builtin.file:
-        path: /var/www/html
-        state: directory
-        mode: '0755'
+  become: true
+  ansible.builtin.file:
+    path: /var/www/html
+    state: directory
+    mode: '0755'
 - name: Ensure unzip is installed
   become: true
   ansible.builtin.apt:
